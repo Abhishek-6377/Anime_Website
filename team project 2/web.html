@@ -1,0 +1,296 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime World</title>
+   
+	
+
+<style>	
+	/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+header {
+    text-align: center;
+    background-color: #ff6f61;
+    padding: 40px;
+    color: white;
+}
+
+header h1 {
+    font-size: 48px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.anime-gallery {
+    padding: 30px 10%;
+    text-align: center;
+}
+
+.anime-gallery h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.anime-cards {
+    display: inline-flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.anime-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.anime-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.anime-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.anime-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.like-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.like-btn:hover {
+    background-color: #218838;
+}
+
+.like-count {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+footer p{
+    text-align: center;
+    padding: 10px;
+	margin:40px 0px -1640px 0px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+	
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Popular Anime</a></li>
+            <li><a href="#">Genres</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <header>
+        <h1>Welcome to Anime World</h1>
+        <p>Your favorite place for all things anime!</p>
+    </header>
+
+    <section class="anime-gallery">
+        <h2>Featured Anime</h2>
+        <div class="anime-cards">
+            <div class="anime-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.uFo9BhACQ-qRsbB7V5NDQgHaEK&pid=Api&P=0&h=180" alt="Anime 1">
+                <h3>Attack on Titan</h3>
+                <p>A gripping story of humanity fighting against giant creatures.</p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.M9XzrWNs-t_xKhjJ_EJw6gHaEK&pid=Api&P=0&h=180" alt="Anime 2">
+                <h3>My Hero Academia</h3>
+                <p>The story of a boy born without powers in a world full of heroes.</p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.BYAUozB3kbOwaFPOgEKQUwHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Naruto</h3>
+                <p>A young ninja's journey to become the strongest in the village.</p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.d1JR_y-cdTEMRbVgeZOpiAHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Dragon Ball</h3>
+                <p>A story of strogest man</p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.b3SUQ2FRR3XkE4_ZP9NvfQHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Death Note</h3>
+                <p>A story to become hero to villain</p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.dCMyS2BikLXEZwYJgxDx0wHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Wind Breaker</h3>
+                <p>A Group of student </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.5EzCEZSETbfgHIWb4_dTWgHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Bleach</h3>
+                <p>The story of a soul reiper</p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.rX298mOw30d82kcPsL9cxgHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>One Peace </h3>
+                <p>The story of a payrat </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.il3FbfFiyTHPhDGG6OySxgAAAA&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Blue Lock</h3>
+                <p>A group of football </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.SO6CcSwQ97UFui_kUvYqSwHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3> One Punch Men</h3>
+                <p>A story of strogest men </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.JXMD2SKvwB8zxgIq-zFs-QHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Solo Leveling</h3>
+                <p>story of men becoming weaker to strong in world </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.4zd7QEOk5WfeFAqr-bf6JQHaEo&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Black Clover</h3>
+                <p>A story of boy to becoming wizerd king </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.dCMyS2BikLXEZwYJgxDx0wHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Wind Breaker</h3>
+                <p>A Group of student </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.z0CK0H791zZMsoXjSrgZewHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Jujutsu kaisan</h3>
+                <p>A fight between huuman and demons </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+			<div class="anime-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.JNIwyYU5psIhdgL71ioyAwHaEK&pid=Api&P=0&h=180" alt="Anime 3">
+                <h3>Deamon Slayer</h3>
+                <p>A boy take revange to all demons </p>
+                <button class="like-btn">Like</button>
+                <p class="like-count">0 Likes</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anime World. All rights reserved.</p>
+    </footer>
+
+    <script>
+	
+	// Add event listeners to all "Like" buttons
+const likeButtons = document.querySelectorAll('.like-btn');
+
+likeButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        // Get the current number of likes and increment it
+        const likeCountElement = button.nextElementSibling;
+        let currentLikes = parseInt(likeCountElement.innerText.split(' ')[0]);
+        currentLikes++;
+        
+        // Update the like count
+        likeCountElement.innerText = `${currentLikes} Likes`;
+    });
+});
+
+	
+	</script>
+</body>
+</html>

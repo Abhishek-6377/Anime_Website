@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watching Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="temp dbz.css">
+</head>
+<body>
+    <h1>Dragon Ball Z</h1>
+    <video id="animeVideo" controls>
+        <source src="../video/Dragon_Ball_Daima_-_02_360p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="controls">
+        <button class="btn" id="playBtn"><i class="fas fa-play"></i> Play</button>
+        <button class="btn" id="pauseBtn"><i class="fas fa-pause"></i> Pause</button>
+        <button class="btn" id="stopBtn"><i class="fas fa-stop"></i> Stop</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('animeVideo');
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const stopBtn = document.getElementById('stopBtn');
+
+        playBtn.addEventListener('click', () => {
+            video.play();
+        });
+
+        pauseBtn.addEventListener('click', () => {
+            video.pause();
+        });
+
+        stopBtn.addEventListener('click', () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+    </script>
+</body>
+</html>

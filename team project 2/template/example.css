@@ -1,0 +1,244 @@
+*{
+    background-color:#000000;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff5722;
+}
+
+.auth-buttons .login-btn,
+.auth-buttons .signup-btn {
+    margin-left: 15px;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .login-btn {
+    background-color: #555;
+}
+
+.auth-buttons .signup-btn {
+    background-color: #ff5722;
+}
+
+.auth-buttons .login-btn:hover {
+    background-color: #777;
+}
+
+.auth-buttons .signup-btn:hover {
+    background-color: #e64a19;
+}
+
+header{
+    margin-bottom: 20px;
+}
+
+.animated-header {
+    height: 100vh;
+    background: linear-gradient(120deg, #ff7e5f, #feb47b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* :root{
+    --quantity:10;
+} */
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform:perspective(1000px);
+    animation: autoRun 20s linear infinite;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+
+}
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0 ;
+    transform:
+         rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg ))
+        translateZ(500px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body{
+    height: 100%;
+    font-family: sans-serif;
+    background: #ffffff;
+    /* #credits (position: fixed; buttom:10px; right: 10px; color:black; font-size:12px; font-family:) */
+}
+.card-container{
+    align-items: flex-start;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: 44px 24px;
+}
+.card-grid{
+    display: grid;
+    /* grid-column-gap: 24px; */  /* depricated */ 
+    column-gap: 24px;
+    /* grid-row-gap: 24px; */   /* depricated */
+    row-gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+}
+@media(min-width: 540px){
+    .card-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width: 960px){
+    .card-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card{
+    position: relative;
+}
+.card::before{
+    content:'';
+    display: block;
+    padding-bottom: 150%;
+    widows: 100%;
+}
+
+.card-background{
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 
+    filter 200ms linear
+    transform 200ms linear;
+}
+.card:hover .card-background{
+    transform: scale(1.05);
+    filter: none;
+}
+.card-grid:hover > .card:not(:hover) .card-background{
+    filter: brightness(0.5) saturate(1) contrast(1.2) blur(5px);
+    transition:all 1s ease-in-out;
+}
+.card-grid:hover > .card:not(:hover) .card-content{
+    filter: brightness(0.5) saturate(1) contrast(1.2) blur(5px);
+}
+
+.card-content{
+    padding: 24px;
+    position: absolute;
+    top: 0;
+}
+.card-catagory{
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card-heading{
+color: white;
+font-size: 1.8rem;
+}
